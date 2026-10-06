@@ -1,5 +1,7 @@
 import 'package:flutter/material.dart';
 
+import 'features/focus_sessions/pages/focus_sessions_page.dart';
+
 void main() {
   runApp(const MyApp());
 }
@@ -11,7 +13,7 @@ class MyApp extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return MaterialApp(
-      title: 'Flutter Demo',
+      title: 'Focus sessions',
       theme: ThemeData(
         // This is the theme of your application.
         //
@@ -28,9 +30,14 @@ class MyApp extends StatelessWidget {
         //
         // This works for code too, not just values: Most code changes can be
         // tested with just a hot reload.
-        colorScheme: .fromSeed(seedColor: Colors.deepPurple),
+        colorScheme: ColorScheme.fromSeed(
+          seedColor: const Color(0xFF466A55),
+          secondary: const Color(0xFFB5673F),
+        ),
+        scaffoldBackgroundColor: const Color(0xFFF4F6F2),
+        useMaterial3: true,
       ),
-      home: const MyHomePage(title: 'Flutter Demo Home Page'),
+      home: const FocusSessionsPage(),
     );
   }
 }
